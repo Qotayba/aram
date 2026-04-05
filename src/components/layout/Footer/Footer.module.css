@@ -1,0 +1,129 @@
+.footer {
+  background: var(--dark);
+  padding: 60px 0 32px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+  flex-wrap: wrap;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 28px;
+}
+
+/* === Brand === */
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.brandLogo {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+}
+
+.tagline {
+  font-size: 12px;
+  color: rgba(245, 237, 216, 0.4);
+  font-style: italic;
+}
+
+:global([dir="rtl"]) .tagline {
+  font-style: normal;
+}
+
+/* === Nav === */
+.nav {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(245, 237, 216, 0.5);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.nav a:hover {
+  color: var(--gold);
+}
+
+/* === Manufacturer === */
+.manufacturer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+:global([dir="rtl"]) .manufacturer {
+  align-items: flex-start;
+}
+
+.mfrLogo {
+  height: 44px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+  /* Convert to cream-white against dark footer */
+  filter: brightness(0) invert(1);
+  opacity: 0.65;
+}
+
+.mfrLabel {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(245, 237, 216, 0.3);
+}
+
+/* === Bottom bar === */
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.bottom p {
+  font-size: 12px;
+  color: rgba(245, 237, 216, 0.35);
+}
+
+.allergy {
+  font-size: 11px !important;
+  color: rgba(201, 168, 76, 0.5) !important;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .top {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .nav {
+    gap: 16px;
+  }
+
+  .manufacturer {
+    align-items: flex-start;
+  }
+
+  .bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}

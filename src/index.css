@@ -1,0 +1,133 @@
+/* ============================================================
+   ARAM PREMIUM TAHINI — Global styles
+   Design tokens, reset, utilties, and shared animations.
+   Component-specific styles live in *.module.css files.
+   Color palette:
+     Deep teal: #1B4D4A  |  Gold: #C9A84C
+     Cream:     #F5EDD8  |  Dark: #141414
+============================================================ */
+
+/* === Reset === */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* === CSS Custom Properties === */
+:root {
+  --teal:    #1B4D4A;
+  --teal-2:  #2D6B66;
+  --gold:    #C9A84C;
+  --gold-lt: #E2C87A;
+  --cream:   #F5EDD8;
+  --cream-2: #EDE0C4;
+  --dark:    #141414;
+  --mid:     #4A4A4A;
+  --light:   #FDFAF4;
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Jost', sans-serif;
+  --font-ar:      'Noto Sans Arabic', sans-serif;
+  --font-he:      'Noto Sans Hebrew', sans-serif;
+
+  --radius:     4px;
+  --transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* === RTL font overrides === */
+[lang="ar"] body { font-family: var(--font-ar); }
+[lang="he"] body { font-family: var(--font-he); }
+
+/* === Base === */
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--light);
+  color: var(--dark);
+  overflow-x: hidden;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a { text-decoration: none; }
+
+/* === Layout utilities === */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.center { text-align: center; }
+
+/* === Section typography === */
+.section-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--teal);
+  margin-bottom: 24px;
+}
+.section-title em {
+  font-style: italic;
+  color: var(--gold);
+}
+[dir="rtl"] .section-title { font-family: inherit; }
+
+/* === Buttons === */
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.btn--primary {
+  background: var(--gold);
+  color: var(--dark);
+  border: 2px solid var(--gold);
+}
+.btn--primary:hover {
+  background: var(--gold-lt);
+  border-color: var(--gold-lt);
+  transform: translateY(-2px);
+}
+.btn--ghost {
+  background: transparent;
+  color: var(--cream);
+  border: 2px solid rgba(245, 237, 216, 0.4);
+}
+.btn--ghost:hover {
+  border-color: var(--cream);
+  background: rgba(245, 237, 216, 0.08);
+}
+
+/* === Scroll-triggered fade-in (applied by useIntersectionObserver) === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+

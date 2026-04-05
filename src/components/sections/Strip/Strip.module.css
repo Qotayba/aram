@@ -1,0 +1,35 @@
+.strip {
+  background: var(--teal);
+  overflow: hidden;
+  padding: 0;
+  border-top: 1px solid rgba(201, 168, 76, 0.3);
+  border-bottom: 1px solid rgba(201, 168, 76, 0.3);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 14px 0;
+  white-space: nowrap;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(245, 237, 216, 0.75);
+  animation: ticker 18s linear infinite;
+}
+
+.item {
+  flex-shrink: 0;
+}
+
+.dot {
+  color: var(--gold);
+  font-size: 8px;
+}
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
