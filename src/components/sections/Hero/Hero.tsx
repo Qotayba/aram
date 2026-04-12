@@ -15,7 +15,7 @@ export default function Hero() {
         </svg>
       </div>
 
-      <img src={heroLogo} alt="Aram Premium Tahini" className={styles.heroLogo} />
+      <img src={heroLogo} alt="Aram Premium Tahini" className={styles.heroLogo} width="273" height="291" />
 
       <div className={styles.visual}>
         <div className={styles.bowlWrap}>

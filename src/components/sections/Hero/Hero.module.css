@@ -35,6 +35,7 @@
   z-index: 2;
   width: clamp(220px, 17vw, 360px);
   height: auto;
+  aspect-ratio: 273 / 291;
   object-fit: contain;
   margin-bottom: 16px;
 }
@@ -137,4 +138,22 @@
   .waveDivider {
     height: 45%;
   }
+}
+
+@media (max-width: 400px) {
+  .hero {
+    padding: 72px 16px 10px;
+  }
+
+  .heroLogo {
+    width: 150px;
+  }
+
+  .bowlWrap {
+    width: 180px;
+    height: 180px;
+  }
+
+  .ring  { width: 140px; height: 140px; }
+  .ring2 { width: 170px; height: 170px; }
 }
