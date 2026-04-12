@@ -4,14 +4,13 @@
   left: 0;
   right: 0;
   z-index: 100;
-  background: transparent;
+  background: var(--teal);
   transition: background var(--transition), box-shadow var(--transition);
   padding: 0 32px;
 }
 
 .scrolled {
-  background: rgba(20, 20, 20, 0.96);
-  backdrop-filter: blur(12px);
+  background: #0e2e2c;
   box-shadow: 0 2px 24px rgba(0, 0, 0, 0.3);
 }
 
