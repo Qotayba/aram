@@ -1,0 +1,89 @@
+.products {
+  padding: 100px 0;
+  background: var(--light);
+}
+
+.category {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.catTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-weight: 300;
+  color: var(--teal);
+  margin-bottom: 16px;
+}
+:global([dir="rtl"]) .catTitle { font-family: inherit; }
+
+.catText {
+  color: var(--mid);
+  line-height: 1.75;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+/* Product card grid – reuses existing ProductCard */
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 64px;
+}
+
+/* Halva placeholder */
+.halvaPlaceholder {
+  width: 200px;
+  height: 200px;
+  margin: 24px auto 0;
+  border-radius: 50%;
+  background: var(--cream);
+  border: 2px dashed var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.halvaIcon {
+  font-size: 3rem;
+}
+
+/* Uses */
+.uses {
+  max-width: 800px;
+  margin: 48px auto 0;
+  text-align: center;
+  padding-top: 48px;
+  border-top: 1px solid rgba(201, 168, 76, 0.2);
+}
+
+.usesImgWrap {
+  max-width: 560px;
+  margin: 24px auto 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(201, 168, 76, 0.15);
+}
+
+.usesImg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .cardGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .products { padding: 64px 0; }
+  .cardGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

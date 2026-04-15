@@ -14,7 +14,7 @@ export default function Strip() {
           <span key={i} className={styles.item}>
             {item}
             {i < doubled.length - 1 && (
-              <span className={styles.dot}> ◆ </span>
+              <span className={styles.dot}> • </span>
             )}
           </span>
         ))}

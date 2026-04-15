@@ -1,6 +1,6 @@
 .contact {
   padding: 120px 0;
-  background: var(--cream);
+  background: var(--light);
 }
 
 .grid {
@@ -10,10 +10,9 @@
   margin-top: 60px;
 }
 
-/* === Card === */
 .card {
-  background: var(--light);
-  border: 1px solid var(--cream-2);
+  background: var(--cream);
+  border: 1px solid rgba(201, 168, 76, 0.15);
   border-radius: 4px;
   padding: 36px 24px;
   text-align: center;
@@ -60,7 +59,6 @@
   color: var(--gold);
 }
 
-/* === Responsive === */
 @media (max-width: 1024px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
@@ -68,6 +66,7 @@
 }
 
 @media (max-width: 480px) {
+  .contact { padding: 80px 0; }
   .grid {
     grid-template-columns: 1fr;
   }

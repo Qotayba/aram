@@ -1,0 +1,13 @@
+.faq {
+  padding: 100px 0;
+  background: var(--cream);
+}
+
+.list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .faq { padding: 64px 0; }
+}

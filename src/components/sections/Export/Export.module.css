@@ -1,0 +1,44 @@
+.export {
+  padding: 100px 0;
+  background: var(--cream);
+}
+
+.body {
+  max-width: 800px;
+  margin: 0 auto 48px;
+  text-align: center;
+  color: var(--mid);
+  line-height: 1.75;
+  font-size: 0.95rem;
+}
+
+.distBox {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  background: var(--light);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-radius: var(--radius);
+  padding: 48px 32px;
+}
+
+.distTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-weight: 300;
+  color: var(--teal);
+  margin-bottom: 16px;
+}
+:global([dir="rtl"]) .distTitle { font-family: inherit; }
+
+.distBody {
+  color: var(--mid);
+  line-height: 1.75;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .export { padding: 64px 0; }
+  .distBox { padding: 32px 20px; }
+}

@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import { useLanguage } from '../../../context/LanguageContext';
 import { useIntersectionObserver } from '../../../hooks/useIntersectionObserver';
-import styles from './Contact.module.css';
+import styles from './ContactUs.module.css';
 
 interface ContactItem {
   id: string;
@@ -42,39 +42,39 @@ const WEB_ICON = (
 
 const CONTACT_ITEMS: ContactItem[] = [
   {
-    id:       'phone',
+    id: 'phone',
     titleKey: 'contactPhone',
-    display:  '009-7092-312-729',
-    href:     'tel:0097092312729',
-    icon:     PHONE_ICON,
+    display: '009-7092-312-729',
+    href: 'tel:0097092312729',
+    icon: PHONE_ICON,
   },
   {
-    id:       'whatsapp',
+    id: 'whatsapp',
     titleKey: 'contactWA',
-    display:  '',
+    display: '+972 59-393-3395',
     labelKey: 'contactWALink',
-    href:     'https://wa.me/97092312729',
-    target:   '_blank',
-    icon:     WA_ICON,
+    href: 'https://wa.me/972593933395',
+    target: '_blank',
+    icon: WA_ICON,
   },
   {
-    id:       'email',
+    id: 'email',
     titleKey: 'contactEmail',
-    display:  'info@aram-tahini.com',
-    href:     'mailto:info@aram-tahini.com',
-    icon:     EMAIL_ICON,
+    display: 'info@aram-tahini.com',
+    href: 'mailto:info@aram-tahini.com',
+    icon: EMAIL_ICON,
   },
   {
-    id:       'web',
+    id: 'web',
     titleKey: 'contactWeb',
-    display:  'www.aram-tahini.com',
-    href:     'https://www.aram-tahini.com',
-    target:   '_blank',
-    icon:     WEB_ICON,
+    display: 'www.aram-tahini.com',
+    href: 'https://www.aram-tahini.com',
+    target: '_blank',
+    icon: WEB_ICON,
   },
 ];
 
-export default function Contact() {
+export default function ContactUs() {
   const { t } = useLanguage();
   const { ref, isVisible } = useIntersectionObserver<HTMLDivElement>();
 

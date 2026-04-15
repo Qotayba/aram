@@ -1,0 +1,37 @@
+.pl {
+  padding: 100px 0;
+  background: var(--teal);
+  color: var(--cream);
+}
+
+.pl :global(.section-eyebrow) {
+  color: var(--gold);
+}
+
+.slogan {
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--gold);
+  margin-bottom: 24px;
+}
+:global([dir="rtl"]) .slogan { font-family: inherit; }
+
+.body {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  text-align: center;
+  color: rgba(245, 237, 216, 0.85);
+  line-height: 1.75;
+  font-size: 0.95rem;
+}
+
+.ctaWrap {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .pl { padding: 64px 0; }
+}

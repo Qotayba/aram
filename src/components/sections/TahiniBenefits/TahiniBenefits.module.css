@@ -1,0 +1,108 @@
+.benefits {
+  padding: 100px 0;
+  background: var(--cream);
+}
+
+.desc {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 64px;
+  color: var(--mid);
+  line-height: 1.75;
+  font-size: 0.95rem;
+}
+
+/* ── Radial wheel (desktop) ── */
+.wheel {
+  position: relative;
+  width: 560px;
+  height: 560px;
+  margin: 0 auto;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.placeholder {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: var(--light);
+  border: 2px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholderIcon {
+  font-size: 3rem;
+}
+
+/* 10 callouts around a circle */
+.callout {
+  --angle: calc(var(--i) * 36deg - 90deg);
+  --r: 240px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+    translate(
+      calc(cos(var(--angle)) * var(--r)),
+      calc(sin(var(--angle)) * var(--r))
+    );
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  animation: fadeCallout 0.5s ease both;
+  animation-delay: calc(var(--i) * 0.08s);
+}
+
+@keyframes fadeCallout {
+  from { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+  to   { opacity: 1; }
+}
+
+.calloutIcon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.calloutText {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--teal);
+}
+
+/* Mobile grid – hidden on desktop */
+.mobileGrid {
+  display: none;
+}
+
+/* ── Mobile: hide wheel, show grid ── */
+@media (max-width: 768px) {
+  .benefits { padding: 64px 0; }
+
+  .wheel { display: none; }
+
+  .mobileGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .mobileItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--light);
+    border: 1px solid rgba(201, 168, 76, 0.15);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+  }
+}

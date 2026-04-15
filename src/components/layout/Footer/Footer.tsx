@@ -4,10 +4,14 @@ import natureWorldLogo from '../../../assets/NatureWorldlogo.svg';
 import styles from './Footer.module.css';
 
 const NAV_LINKS = [
-  { href: '#about',     key: 'navStory'     as const },
-  { href: '#products',  key: 'navProducts'  as const },
-  { href: '#nutrition', key: 'navNutrition' as const },
-  { href: '#contact',   key: 'navContact'   as const },
+  { href: '#story',         key: 'navStory'        as const },
+  { href: '#quality',       key: 'navQuality'      as const },
+  { href: '#benefits',      key: 'navBenefits'     as const },
+  { href: '#products',      key: 'navProducts'     as const },
+  { href: '#export',        key: 'navExport'       as const },
+  { href: '#private-label', key: 'navPrivateLabel' as const },
+  { href: '#faq',           key: 'navFAQ'          as const },
+  { href: '#contact',       key: 'navContact'      as const },
 ];
 
 export default function Footer() {

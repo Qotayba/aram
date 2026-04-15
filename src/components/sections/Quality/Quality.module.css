@@ -1,0 +1,117 @@
+.quality {
+  background: var(--teal);
+  padding: 100px 0;
+  color: var(--cream);
+}
+
+.quality :global(.section-eyebrow) {
+  color: var(--gold);
+}
+
+.block {
+  max-width: 800px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.blockTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-weight: 300;
+  color: var(--cream);
+  margin-bottom: 16px;
+}
+:global([dir="rtl"]) .blockTitle { font-family: inherit; }
+
+.blockText {
+  color: rgba(245, 237, 216, 0.8);
+  line-height: 1.75;
+  font-size: 0.95rem;
+}
+
+/* Lab & Certifications */
+.labSection {
+  text-align: center;
+  margin-top: 48px;
+}
+
+.labTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-weight: 300;
+  color: var(--cream);
+  margin-bottom: 16px;
+}
+:global([dir="rtl"]) .labTitle { font-family: inherit; }
+
+.labIntro {
+  color: rgba(245, 237, 216, 0.8);
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.75;
+  font-size: 0.95rem;
+}
+
+.labImgWrap {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(201, 168, 76, 0.25);
+}
+
+.labImg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.certGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.certCard {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-radius: var(--radius);
+  padding: 32px 24px;
+  text-align: center;
+  transition: transform var(--transition), background var(--transition);
+}
+
+.certCard:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.certIcon {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.certTitle {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+:global([dir="rtl"]) .certTitle { font-family: inherit; }
+
+.certDesc {
+  color: rgba(245, 237, 216, 0.7);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .quality { padding: 64px 0; }
+  .certGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
