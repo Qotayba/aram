@@ -44,8 +44,8 @@ const CONTACT_ITEMS: ContactItem[] = [
   {
     id: 'phone',
     titleKey: 'contactPhone',
-    display: '009-7092-312-729',
-    href: 'tel:0097092312729',
+    display: '+972-59-393-3395',
+    href: 'tel:+972593933395',
     icon: PHONE_ICON,
   },
   {
@@ -60,15 +60,15 @@ const CONTACT_ITEMS: ContactItem[] = [
   {
     id: 'email',
     titleKey: 'contactEmail',
-    display: 'info@aram-tahini.com',
-    href: 'mailto:info@aram-tahini.com',
+    display: 'info@aramtahini.com',
+    href: 'mailto:info@aramtahini.com',
     icon: EMAIL_ICON,
   },
   {
     id: 'web',
     titleKey: 'contactWeb',
-    display: 'www.aram-tahini.com',
-    href: 'https://www.aram-tahini.com',
+    display: 'www.aramtahini.com',
+    href: 'https://www.aramtahini.com/',
     target: '_blank',
     icon: WEB_ICON,
   },
@@ -89,18 +89,19 @@ export default function ContactUs() {
           className={`${styles.grid} fade-in ${isVisible ? 'visible' : ''}`}
         >
           {CONTACT_ITEMS.map((item) => (
-            <div key={item.id} className={styles.card}>
+            <a
+              key={item.id}
+              href={item.href}
+              className={styles.card}
+              target={item.target}
+              rel={item.target === '_blank' ? 'noopener noreferrer' : undefined}
+            >
               <div className={styles.icon}>{item.icon}</div>
               <h4>{t(item.titleKey)}</h4>
-              <a
-                href={item.href}
-                className={styles.link}
-                target={item.target}
-                rel={item.target === '_blank' ? 'noopener noreferrer' : undefined}
-              >
+              <span className={styles.link}>
                 {item.labelKey ? t(item.labelKey) : item.display}
-              </a>
-            </div>
+              </span>
+            </a>
           ))}
         </div>
       </div>

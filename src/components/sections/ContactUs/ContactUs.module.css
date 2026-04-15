@@ -11,11 +11,15 @@
 }
 
 .card {
+  display: block;
   background: var(--cream);
   border: 1px solid rgba(201, 168, 76, 0.15);
   border-radius: 4px;
   padding: 36px 24px;
   text-align: center;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
 

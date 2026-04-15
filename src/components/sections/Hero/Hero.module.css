@@ -1,6 +1,5 @@
 .hero {
   min-height: auto;
-  max-height: calc(100vh - 48px);
   background: var(--cream);
   display: flex;
   flex-direction: column;
@@ -9,7 +8,7 @@
   text-align: center;
   padding: 76px 60px 12px;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* === Wave divider (cream → gold → teal) === */
@@ -37,6 +36,7 @@
   height: auto;
   aspect-ratio: 273 / 291;
   object-fit: contain;
+  margin-top: 40px;
   margin-bottom: 16px;
 }
 
