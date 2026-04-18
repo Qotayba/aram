@@ -2,6 +2,7 @@ import { useLanguage } from '../../../context/LanguageContext';
 import { useIntersectionObserver } from '../../../hooks/useIntersectionObserver';
 import { products } from '../../../data/products';
 import ProductCard from '../Products/ProductCard/ProductCard';
+import halvaImg from '../../../assets/Halva.jpeg';
 import koftaImg from '../../../assets/Kofta.jpeg';
 import styles from './NewProducts.module.css';
 
@@ -33,7 +34,7 @@ export default function NewProducts() {
             <h3 className={styles.catTitle}>{t('halvaTitle')}</h3>
             <p className={styles.catText}>{t('halvaDesc')}</p>
             <div className={styles.halvaPlaceholder}>
-              <span className={styles.halvaIcon}>🍬</span>
+              <img src={halvaImg} alt="Halva" className={styles.halvaImg} loading="lazy" />
             </div>
           </div>
 
