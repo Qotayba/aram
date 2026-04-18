@@ -1,31 +1,54 @@
-import heroImage from '../../../assets/heroImage.png';
-import heroLogo from '../../../assets/HeroLogo.png';
+import { useLanguage } from '../../../context/LanguageContext';
+import heroProduct from '../../../assets/newHero.png';
 import styles from './Hero.module.css';
 
 export default function Hero() {
+  const { t } = useLanguage();
+
   return (
     <section className={styles.hero}>
-      {/* Cream-to-teal wave divider */}
-      <div className={styles.waveDivider} aria-hidden="true">
-        <svg viewBox="0 0 1440 400" preserveAspectRatio="none">
-          {/* Teal fill below the wave */}
-          <path d="M0,120 C480,100 960,40 1440,70 L1440,400 L0,400 Z" fill="#1b4d4a" />
-          {/* Thick gold band along the wave */}
-          <path d="M0,120 C480,100 960,40 1440,70" fill="none" stroke="#c9a84c" strokeWidth="8" />
-        </svg>
-      </div>
+      {/* Large faded brand watermark */}
+      <span className={styles.watermark} aria-hidden="true">ARAM</span>
 
-      <img src={heroLogo} alt="Aram Premium Tahini" className={styles.heroLogo} width="273" height="291" />
+      <div className={styles.container}>
+        {/* Text column */}
+        <div className={styles.textCol}>
+          <span className={styles.eyebrow}>{t('heroEyebrow')}</span>
+          <h1 className={styles.headline}>
+            {t('heroHeadline')}{' '}
+            <em>{t('heroHeadlineAccent')}</em>
+          </h1>
+          <p className={styles.body}>{t('heroBody')}</p>
+          <div className={styles.ctas}>
+            <a href="#products" className={styles.btnPrimary}>
+              {t('heroCta1')}
+            </a>
+            <a href="#story" className={styles.btnSecondary}>
+              <span className={styles.playIcon}>&#9654;</span>
+              {t('heroCta2')}
+            </a>
+          </div>
+        </div>
 
-      <div className={styles.visual}>
-        <div className={styles.bowlWrap}>
-          <div className={styles.ring} />
-          <div className={`${styles.ring} ${styles.ring2}`} />
+        {/* Image column */}
+        <div className={styles.imageCol}>
+          <div className={styles.imageGlow} aria-hidden="true" />
+          <div className={styles.ring1} aria-hidden="true" />
+          <div className={styles.ring2} aria-hidden="true" />
           <img
-            src={heroImage}
+            src={heroProduct}
             alt="Aram Premium Tahini"
             className={styles.heroImg}
           />
+          {/* Floating badges */}
+          <div className={`${styles.badge} ${styles.badge1}`}>
+            <span className={styles.badgeLabel}>100%</span>
+            <span className={styles.badgeText}>Pure Sesame</span>
+          </div>
+          <div className={`${styles.badge} ${styles.badge2}`}>
+            <span className={styles.badgeLabel}>&#1591;&#1581;&#1610;&#1606;&#1577;</span>
+            <span className={styles.badgeText}>Tahini</span>
+          </div>
         </div>
       </div>
     </section>

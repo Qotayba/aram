@@ -5,6 +5,14 @@ export interface Translations {
   dir: string;
   logoSub: string;
 
+  // Hero
+  heroEyebrow: string;
+  heroHeadline: string;
+  heroHeadlineAccent: string;
+  heroBody: string;
+  heroCta1: string;
+  heroCta2: string;
+
   // Nav
   navAbout: string;
   navStory: string;
@@ -153,6 +161,14 @@ export const translations: Record<Lang, Translations> = {
     dir: 'ltr',
     logoSub: 'PREMIUM TAHINI',
 
+    // Hero
+    heroEyebrow: 'Premium Tahini · Since 1940',
+    heroHeadline: 'Crafted from the',
+    heroHeadlineAccent: 'Finest Sesame',
+    heroBody: 'Pure, natural tahini made from 100% carefully selected sesame seeds — roasted to perfection and ground into a silky, rich paste that elevates every dish.',
+    heroCta1: 'Explore Products',
+    heroCta2: 'Our Story',
+
     // Nav
     navAbout: 'About',
     navStory: 'Our Story',
@@ -289,6 +305,14 @@ export const translations: Record<Lang, Translations> = {
     dir: 'rtl',
     logoSub: 'طحينة فاخرة',
 
+    // Hero
+    heroEyebrow: 'طحينة فاخرة · منذ 1940',
+    heroHeadline: 'مصنوعة من',
+    heroHeadlineAccent: 'أجود السمسم',
+    heroBody: 'طحينة نقية وطبيعية من سمسم مختار بعناية 100% — محمص بإتقان ومطحون إلى قوام كريمي غني يرتقي بكل طبق.',
+    heroCta1: 'استكشف منتجاتنا',
+    heroCta2: 'قصتنا',
+
     // Nav
     navAbout: 'من نحن',
     navStory: 'قصتنا',
@@ -424,6 +448,14 @@ export const translations: Record<Lang, Translations> = {
   he: {
     dir: 'rtl',
     logoSub: 'טחינה יוקרתית',
+
+    // Hero
+    heroEyebrow: 'טחינה יוקרתית · מאז 1940',
+    heroHeadline: 'מיוצרת מ',
+    heroHeadlineAccent: 'השומשום המשובח',
+    heroBody: 'טחינה טהורה וטבעית מ-100% זרעי שומשום שנבחרו בקפידה — קלויים לשלמות וטחונים למרקם קרמי עשיר שמעלה כל מנה.',
+    heroCta1: 'גלה את המוצרים',
+    heroCta2: 'הסיפור שלנו',
 
     // Nav
     navAbout: 'אודותינו',
