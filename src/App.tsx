@@ -1,4 +1,4 @@
-import { LanguageProvider } from './context/LanguageContext';
+import { LanguageProvider } from './context/LanguageContext'; 
 import Header         from './components/layout/Header/Header';
 import Footer         from './components/layout/Footer/Footer';
 import Strip          from './components/sections/Strip/Strip';

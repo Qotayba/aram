@@ -36,46 +36,28 @@
   height: auto;
   aspect-ratio: 273 / 291;
   object-fit: contain;
-  margin-top: 40px;
-  margin-bottom: 16px;
+  margin-top: 16px;
+  padding-top:40px;
+  margin-bottom: -24px;
 }
 
 /* === Visual / Bowl === */
 .visual {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: -66px;
 }
 
 .bowlWrap {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: min(420px, 95vw);
+  height: min(420px, 95vw);
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.ring {
-  position: absolute;
-  border-radius: 50%;
-  border: 1px solid rgba(201, 168, 76, 0.25);
-  width: 230px;
-  height: 230px;
-  animation: pulseRing 3s ease-in-out infinite;
-}
-
-.ring2 {
-  width: 280px;
-  height: 280px;
-  animation-delay: 1.5s;
-}
-
-@keyframes pulseRing {
-  0%, 100% { opacity: 0.3; transform: scale(1); }
-  50%       { opacity: 0.6; transform: scale(1.03); }
 }
 
 .heroImg {
@@ -83,7 +65,7 @@
   height: 100%;
   object-fit: contain;
   position: relative;
-  z-index: 2;
+  z-index: 3;
   animation: goldGlow 4s ease-in-out infinite;
 }
 
@@ -110,17 +92,14 @@
   }
 
   .bowlWrap {
-    width: 260px;
-    height: 260px;
+    width: min(460px, 80vw);
+    height: min(460px, 80vw);
   }
-
-  .ring  { width: 200px; height: 200px; }
-  .ring2 { width: 240px; height: 240px; }
 }
 
 @media (max-width: 768px) {
   .hero {
-    padding: 80px 24px 16px;
+    padding: 60px 12px 0;
   }
 
   .heroLogo {
@@ -128,12 +107,9 @@
   }
 
   .bowlWrap {
-    width: 220px;
-    height: 220px;
+    width: min(500px, 98vw);
+    height: min(500px, 98vw);
   }
-
-  .ring  { width: 170px; height: 170px; }
-  .ring2 { width: 210px; height: 210px; }
 
   .waveDivider {
     height: 45%;
@@ -142,7 +118,7 @@
 
 @media (max-width: 400px) {
   .hero {
-    padding: 72px 16px 10px;
+    padding: 50px 8px 0;
   }
 
   .heroLogo {
@@ -150,10 +126,7 @@
   }
 
   .bowlWrap {
-    width: 180px;
-    height: 180px;
+    width: min(420px, 98vw);
+    height: min(420px, 98vw);
   }
-
-  .ring  { width: 140px; height: 140px; }
-  .ring2 { width: 170px; height: 170px; }
 }
