@@ -12,6 +12,22 @@
   font-size: 0.95rem;
 }
 
+/* Banner image */
+.bannerWrap {
+  max-width: 1000px;
+  margin: 0 auto 48px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+}
+
+.bannerImg {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
 .distBox {
   max-width: 700px;
   margin: 0 auto;
@@ -19,7 +35,22 @@
   background: var(--light);
   border: 1px solid rgba(201, 168, 76, 0.2);
   border-radius: var(--radius);
-  padding: 48px 32px;
+  overflow: hidden;
+  padding-bottom: 48px;
+}
+
+/* Distributor image inside box */
+.distImgWrap {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.distImg {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
 }
 
 .distTitle {
@@ -28,6 +59,7 @@
   font-weight: 300;
   color: var(--teal);
   margin-bottom: 16px;
+  padding: 0 32px;
 }
 :global([dir="rtl"]) .distTitle { font-family: inherit; }
 
@@ -36,6 +68,7 @@
   line-height: 1.75;
   font-size: 0.9rem;
   margin-bottom: 24px;
+  padding: 0 32px;
 }
 
 @media (max-width: 768px) {

@@ -27,7 +27,7 @@ export const products: Product[] = [
     descKey: 'p1desc',
     featured: false,
     wholesale: false,
-    tags: ['tagNonGmo', 'tagKosher', 'tagNoAdd'],
+    tags: ['tagKosher', 'tagNoAdd'],
   },
   {
     id: '1kg',
@@ -39,7 +39,7 @@ export const products: Product[] = [
     descKey: 'p2desc',
     featured: true,
     wholesale: false,
-    tags: ['tagNonGmo', 'tagKosher', 'tagNoAdd'],
+    tags: ['tagKosher', 'tagNoAdd'],
   },
   {
     id: '17kg',
@@ -51,6 +51,6 @@ export const products: Product[] = [
     descKey: 'p3desc',
     featured: false,
     wholesale: true,
-    tags: ['tagNonGmo', 'tagKosher', 'tagNoAdd'],
+    tags: ['tagKosher', 'tagNoAdd'],
   },
 ];

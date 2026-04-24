@@ -1,12 +1,13 @@
 import { useLanguage } from '../../../context/LanguageContext';
 import { useIntersectionObserver } from '../../../hooks/useIntersectionObserver';
 import labImg from '../../../assets/lap.jpeg';
+import prodQualityImg from '../../../assets/photos/ProductionQuality.jpeg';
+import prodLineImg from '../../../assets/photos/ProductionLine.jpeg';
 import styles from './Quality.module.css';
 
 const CERTS = [
   { titleKey: 'qualCert1' as const, descKey: 'qualCert1desc' as const, icon: '🛡️' },
   { titleKey: 'qualCert2' as const, descKey: 'qualCert2desc' as const, icon: '✡️' },
-  { titleKey: 'qualCert3' as const, descKey: 'qualCert3desc' as const, icon: '🌿' },
 ] as const;
 
 export default function Quality() {
@@ -20,15 +21,25 @@ export default function Quality() {
           <p className="section-eyebrow center">{t('qualityTitle')}</p>
 
           {/* Production Quality */}
-          <div className={styles.block}>
-            <h3 className={styles.blockTitle}>{t('qualProdTitle')}</h3>
-            <p className={styles.blockText}>{t('qualProdText')}</p>
+          <div className={styles.blockRow}>
+            <div className={styles.blockText_col}>
+              <h3 className={styles.blockTitle}>{t('qualProdTitle')}</h3>
+              <p className={styles.blockText}>{t('qualProdText')}</p>
+            </div>
+            <div className={styles.blockImgWrap}>
+              <img src={prodQualityImg} alt="Production quality" className={styles.blockImg} loading="lazy" />
+            </div>
           </div>
 
           {/* Production Line */}
-          <div className={styles.block}>
-            <h3 className={styles.blockTitle}>{t('qualLineTitle')}</h3>
-            <p className={styles.blockText}>{t('qualLineText')}</p>
+          <div className={`${styles.blockRow} ${styles.blockRowReverse}`}>
+            <div className={styles.blockText_col}>
+              <h3 className={styles.blockTitle}>{t('qualLineTitle')}</h3>
+              <p className={styles.blockText}>{t('qualLineText')}</p>
+            </div>
+            <div className={styles.blockImgWrap}>
+              <img src={prodLineImg} alt="Production line" className={styles.blockImg} loading="lazy" />
+            </div>
           </div>
 
           {/* Lab & Certifications */}

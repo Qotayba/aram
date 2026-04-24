@@ -5,7 +5,6 @@ import Strip          from './components/sections/Strip/Strip';
 import Hero           from './components/sections/Hero/Hero';
 import OurStory       from './components/sections/OurStory/OurStory';
 import Quality        from './components/sections/Quality/Quality';
-import TahiniBenefits from './components/sections/TahiniBenefits/TahiniBenefits';
 import NewProducts    from './components/sections/NewProducts/NewProducts';
 import Export         from './components/sections/Export/Export';
 import PrivateLabel   from './components/sections/PrivateLabel/PrivateLabel';
@@ -21,7 +20,6 @@ export default function App() {
         <Hero />
         <OurStory />
         <Quality />
-        <TahiniBenefits />
         <NewProducts />
         <Export />
         <PrivateLabel />

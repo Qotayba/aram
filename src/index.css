@@ -65,7 +65,7 @@ a { text-decoration: none; }
 
 /* === Section typography === */
 .section-eyebrow {
-  font-size: 11px;
+  font-size: 40px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--gold);

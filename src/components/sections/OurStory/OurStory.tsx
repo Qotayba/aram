@@ -1,5 +1,6 @@
 import { useLanguage } from '../../../context/LanguageContext';
 import { useIntersectionObserver } from '../../../hooks/useIntersectionObserver';
+import ourStoryImg from '../../../assets/photos/ourstory.png';
 import styles from './OurStory.module.css';
 
 const VALUES = [
@@ -23,6 +24,11 @@ export default function OurStory() {
           <div className={styles.hero}>
             <h2 className={styles.whoTitle}>{t('storyWhoTitle')}</h2>
             <p className={styles.whoText}>{t('storyWhoText')}</p>
+          </div>
+
+          {/* Story Image */}
+          <div className={styles.storyImgWrap}>
+            <img src={ourStoryImg} alt="Our story" className={styles.storyImg} loading="lazy" />
           </div>
 
           {/* Vision & Mission */}
