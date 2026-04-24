@@ -1,5 +1,6 @@
 import { useLanguage } from '../../../context/LanguageContext';
 import { useIntersectionObserver } from '../../../hooks/useIntersectionObserver';
+import privateLabelImg from '../../../assets/photos/PrivateLable.jpeg';
 import styles from './PrivateLabel.module.css';
 
 export default function PrivateLabel() {
@@ -13,6 +14,9 @@ export default function PrivateLabel() {
           <p className="section-eyebrow center">{t('plTitle')}</p>
           <p className={styles.slogan}>{t('plSlogan')}</p>
           <p className={styles.body}>{t('plBody')}</p>
+          <div className={styles.plImgWrap}>
+            <img src={privateLabelImg} alt="Private label" className={styles.plImg} loading="lazy" />
+          </div>
           <div className={styles.ctaWrap}>
             <a href="mailto:info@aramtahini.com" className="btn btn--primary">
               {t('plCta')}

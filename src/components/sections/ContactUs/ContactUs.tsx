@@ -82,7 +82,6 @@ export default function ContactUs() {
     <section className={styles.contact} id="contact">
       <div className="container">
         <p className="section-eyebrow center">{t('contactEyebrow')}</p>
-        <h2 className="section-title center">{t('contactTitle')}</h2>
 
         <div
           ref={ref}

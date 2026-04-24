@@ -24,6 +24,21 @@
   line-height: 1.8;
 }
 
+/* Story image */
+.storyImgWrap {
+  width: 75%;
+  margin: 0 auto 64px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+}
+
+.storyImg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Vision & Mission grid */
 .vmGrid {
   display: grid;

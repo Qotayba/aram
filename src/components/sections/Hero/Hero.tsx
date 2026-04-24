@@ -19,8 +19,6 @@ export default function Hero() {
 
       <div className={styles.visual}>
         <div className={styles.bowlWrap}>
-          <div className={styles.ring} />
-          <div className={`${styles.ring} ${styles.ring2}`} />
           <img
             src={heroImage}
             alt="Aram Premium Tahini"
