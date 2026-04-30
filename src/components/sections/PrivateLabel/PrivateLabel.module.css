@@ -34,7 +34,7 @@
 
 /* Private label image */
 .plImgWrap {
-  width: 25%;
+  width: 60%;
   margin: 0 auto 40px;
   border-radius: var(--radius);
   overflow: hidden;

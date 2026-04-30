@@ -1,6 +1,6 @@
 import { useLanguage } from '../../../context/LanguageContext';
 import { useIntersectionObserver } from '../../../hooks/useIntersectionObserver';
-import privateLabelImg from '../../../assets/photos/PrivateLable.jpeg';
+import privateLabelImg from '../../../assets/photos/PrivateLable.png';
 import styles from './PrivateLabel.module.css';
 
 export default function PrivateLabel() {
