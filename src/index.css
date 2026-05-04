@@ -34,6 +34,7 @@
   --radius:     4px;
   --transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --marquee-height: 40px;
+  --header-height: 72px;
 }
 
 /* === RTL font overrides === */
@@ -51,9 +52,14 @@ body {
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 a { text-decoration: none; }
+img { max-width: 100%; }
+p, h1, h2, h3, h4, h5, h6, a, span, button {
+  overflow-wrap: anywhere;
+}
 
 /* === Layout utilities === */
 .container {
@@ -90,7 +96,7 @@ a { text-decoration: none; }
 /* === Buttons === */
 .btn {
   display: inline-block;
-  padding: 14px 32px;
+  padding: 14px 28px;
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.1em;
@@ -131,4 +137,42 @@ a { text-decoration: none; }
   transform: translateY(0);
 }
 
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --marquee-height: 36px;
+    --header-height: 64px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .section-eyebrow {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+    letter-spacing: 0.12em;
+    margin-bottom: 10px;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .section-eyebrow {
+    letter-spacing: 0.08em;
+  }
+}
 

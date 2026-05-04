@@ -1,6 +1,6 @@
 .story {
   background: var(--cream);
-  padding: 100px 0;
+  padding: 96px 0;
 }
 
 .hero {
@@ -26,7 +26,7 @@
 
 /* Story image */
 .storyImgWrap {
-  width: 75%;
+  width: min(860px, 82%);
   margin: 0 auto 64px;
   border-radius: var(--radius);
   overflow: hidden;
@@ -43,7 +43,7 @@
 .vmGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 32px;
   margin-bottom: 64px;
 }
 
@@ -130,6 +130,16 @@
 
 @media (max-width: 768px) {
   .story { padding: 64px 0; }
+
+  .storyImgWrap {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .hero {
+    margin-bottom: 40px;
+  }
+
   .vmGrid {
     grid-template-columns: 1fr;
     gap: 24px;
@@ -139,4 +149,10 @@
     gap: 16px;
   }
   .vmCard { padding: 28px 20px; }
+}
+
+@media (max-width: 480px) {
+  .valuesGrid {
+    grid-template-columns: 1fr;
+  }
 }

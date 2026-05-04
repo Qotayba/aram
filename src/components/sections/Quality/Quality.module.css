@@ -1,6 +1,6 @@
 .quality {
   background: var(--teal);
-  padding: 100px 0;
+  padding: 96px 0;
   color: var(--cream);
 }
 
@@ -18,7 +18,7 @@
 .blockRow {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 48px;
+  gap: 36px;
   align-items: center;
   max-width: 1100px;
   margin: 0 auto 64px;
@@ -52,7 +52,7 @@
 
 .blockImg {
   width: 100%;
-  height: 280px;
+  height: clamp(220px, 25vw, 280px);
   object-fit: cover;
   display: block;
 }
@@ -167,7 +167,7 @@
     direction: rtl;
   }
   .blockText_col { text-align: center; }
-  .blockImg { height: 220px; }
+  .blockImg { height: clamp(180px, 45vw, 220px); }
   .certGrid {
     grid-template-columns: 1fr;
     gap: 16px;

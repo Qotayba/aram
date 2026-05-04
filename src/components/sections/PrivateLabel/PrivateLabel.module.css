@@ -34,7 +34,7 @@
 
 /* Private label image */
 .plImgWrap {
-  width: 60%;
+  width: min(680px, 72%);
   margin: 0 auto 40px;
   border-radius: var(--radius);
   overflow: hidden;
@@ -49,4 +49,14 @@
 
 @media (max-width: 768px) {
   .pl { padding: 64px 0; }
+
+  .plImgWrap {
+    width: min(620px, 88%);
+  }
+}
+
+@media (max-width: 480px) {
+  .plImgWrap {
+    width: 100%;
+  }
 }

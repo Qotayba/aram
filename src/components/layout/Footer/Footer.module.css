@@ -1,6 +1,6 @@
 .footer {
   background: var(--teal);
-  padding: 60px 0 32px;
+  padding: 56px 0 28px;
 }
 
 .top {
@@ -122,5 +122,23 @@
   .bottom {
     flex-direction: column;
     text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding-top: 44px;
+  }
+
+  .nav {
+    gap: 12px;
+  }
+
+  .nav a {
+    font-size: 11px;
+  }
+
+  .mfrLogo {
+    height: 58px;
   }
 }

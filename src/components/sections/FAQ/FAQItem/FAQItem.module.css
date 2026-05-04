@@ -42,7 +42,7 @@
 }
 
 .open .answerWrap {
-  max-height: 400px;
+  max-height: 1000px;
 }
 
 .answer {
@@ -50,4 +50,16 @@
   color: var(--mid);
   line-height: 1.75;
   font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .question {
+    font-size: 0.95rem;
+    padding: 16px 0;
+  }
+
+  .answer {
+    font-size: 0.88rem;
+    line-height: 1.65;
+  }
 }

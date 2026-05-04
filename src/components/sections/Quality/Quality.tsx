@@ -7,7 +7,12 @@ import styles from './Quality.module.css';
 
 const CERTS = [
   { titleKey: 'qualCert1' as const, descKey: 'qualCert1desc' as const, icon: '🛡️' },
-  { titleKey: 'qualCert2' as const, descKey: 'qualCert2desc' as const, icon: '✡️' },
+  {
+    titleKey: 'qualCert2' as const,
+    descKey: 'qualCert2desc' as const,
+    /** Neutral verified/certification mark (not a religious symbol). */
+    icon: '✅',
+  },
 ] as const;
 
 export default function Quality() {
