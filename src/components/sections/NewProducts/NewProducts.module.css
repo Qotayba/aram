@@ -1,5 +1,5 @@
 .products {
-  padding: 100px 0;
+  padding: 96px 0;
   background: var(--light);
 }
 
@@ -29,7 +29,7 @@
 .cardGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: 24px;
   margin-bottom: 64px;
 }
 
@@ -82,5 +82,16 @@
   .cardGrid {
     grid-template-columns: 1fr;
     gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .category {
+    margin-bottom: 28px;
+  }
+
+  .uses {
+    margin-top: 36px;
+    padding-top: 36px;
   }
 }

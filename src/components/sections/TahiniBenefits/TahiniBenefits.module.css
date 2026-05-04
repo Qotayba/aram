@@ -15,8 +15,9 @@
 /* ── Radial wheel (desktop) ── */
 .wheel {
   position: relative;
-  width: 560px;
-  height: 560px;
+  width: min(560px, 100%);
+  aspect-ratio: 1 / 1;
+  height: auto;
   margin: 0 auto;
 }
 
@@ -46,7 +47,7 @@
 /* 10 callouts around a circle */
 .callout {
   --angle: calc(var(--i) * 36deg - 90deg);
-  --r: 240px;
+  --r: clamp(130px, 20vw, 240px);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -58,7 +59,8 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  white-space: nowrap;
+  white-space: normal;
+  max-width: 150px;
   animation: fadeCallout 0.5s ease both;
   animation-delay: calc(var(--i) * 0.08s);
 }
@@ -77,6 +79,7 @@
   font-size: 0.85rem;
   font-weight: 500;
   color: var(--teal);
+  line-height: 1.35;
 }
 
 /* Mobile grid – hidden on desktop */
@@ -104,5 +107,11 @@
     border: 1px solid rgba(201, 168, 76, 0.15);
     border-radius: var(--radius);
     padding: 14px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobileGrid {
+    grid-template-columns: 1fr;
   }
 }

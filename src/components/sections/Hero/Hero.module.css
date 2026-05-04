@@ -1,31 +1,13 @@
 .hero {
-  min-height: auto;
   background: var(--cream);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 76px 60px 12px;
+  padding: calc(var(--header-height) + var(--marquee-height) + 12px) 60px 0;
   position: relative;
-  overflow: visible;
-}
-
-/* === Wave divider (cream → gold → teal) === */
-.waveDivider {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 10%;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.waveDivider svg {
-  display: block;
-  width: 100%;
-  height: 100%;
+  overflow: hidden; /* clip the wave at section edges */
 }
 
 /* === Hero Logo === */
@@ -37,22 +19,48 @@
   aspect-ratio: 273 / 291;
   object-fit: contain;
   margin-top: 16px;
-  padding-top:40px;
+  padding-top: 40px;
   margin-bottom: -24px;
 }
 
-/* === Visual / Bowl === */
+/* === Visual / Bowl — this is now the wave's positioning parent === */
 .visual {
-  position: relative;
+  position: relative; /* ← key: wave positions relative to this */
   z-index: 3;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: -66px;
+  width: 100%;
+}
+
+/* === Wave Divider === */
+.waveDivider {
+  position: absolute;
+  /*
+   * top: 35% means the wave's SVG top edge sits at 35% of .visual's height.
+   * Since the wave path starts at y=80 out of 320 viewBox height (25% from top),
+   * the visible wave line lands at roughly 35% + 25%*height = ~upper-middle of the jar.
+   * Tweak `top` in 2–3% increments if your jar image has different padding.
+   */
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;        /* bleed full viewport width */
+  height: 65%;         /* fill from wave down to bottom of visual */
+  z-index: 0;
+  pointer-events: none;
+}
+
+.waveDivider svg {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .bowlWrap {
   position: relative;
+  z-index: 3;          /* jar sits above the wave */
   width: min(420px, 95vw);
   height: min(420px, 95vw);
   display: flex;
@@ -69,28 +77,26 @@
   animation: goldGlow 4s ease-in-out infinite;
 }
 
-/* minimum glow → bigger glow, loops smoothly */
 @keyframes goldGlow {
   0%, 100% {
     filter:
-      drop-shadow(0 0 100px rgba(201, 168, 76, 0.40))   /* ← min: tight glow   */
-      drop-shadow(0 0 40px rgba(201, 168, 76, 0.18))   /* ← min: outer halo   */
-      drop-shadow(0 20px 40px rgba(0, 0, 0, 0.40));    /* ← depth shadow      */
+      drop-shadow(0 0 100px rgba(201, 168, 76, 0.40))
+      drop-shadow(0 0 40px rgba(201, 168, 76, 0.18))
+      drop-shadow(0 20px 40px rgba(0, 0, 0, 0.40));
   }
   50% {
     filter:
-      drop-shadow(0 0 55px rgba(201, 168, 76, 0.80))   /* ← max: tight glow   */
-      drop-shadow(0 0 100px rgba(201, 168, 76, 0.40))  /* ← max: outer halo   */
-      drop-shadow(0 20px 40px rgba(0, 0, 0, 0.40));    /* ← depth shadow      */
+      drop-shadow(0 0 55px rgba(201, 168, 76, 0.80))
+      drop-shadow(0 0 100px rgba(201, 168, 76, 0.40))
+      drop-shadow(0 20px 40px rgba(0, 0, 0, 0.40));
   }
 }
 
 /* === Responsive === */
 @media (max-width: 1024px) {
   .hero {
-    padding: 80px 36px 20px;
+    padding: calc(var(--header-height) + var(--marquee-height) + 10px) 36px 0;
   }
-
   .bowlWrap {
     width: min(460px, 80vw);
     height: min(460px, 80vw);
@@ -99,32 +105,24 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 60px 12px 0;
+    padding: calc(var(--header-height) + var(--marquee-height) + 8px) 12px 0;
   }
-
   .heroLogo {
     width: 180px;
   }
-
   .bowlWrap {
     width: min(500px, 98vw);
     height: min(500px, 98vw);
-  }
-
-  .waveDivider {
-    height: 45%;
   }
 }
 
 @media (max-width: 400px) {
   .hero {
-    padding: 50px 8px 0;
+    padding: calc(var(--header-height) + var(--marquee-height) + 8px) 8px 0;
   }
-
   .heroLogo {
     width: 150px;
   }
-
   .bowlWrap {
     width: min(420px, 98vw);
     height: min(420px, 98vw);
